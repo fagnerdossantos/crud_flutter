@@ -31,4 +31,4 @@ You can download the Application and run in Android, Linux or Windows platform b
 You can clone the Repository:
 > Link
 
-> **OSB: There're a folder called REPOMedia where all the used media is located.
+> **OSB:** There're a folder called REPOMedia where all the used media is located.
