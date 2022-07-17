@@ -1,4 +1,8 @@
+import 'package:crud_flutter/src/app/register/components/back_arrow.dart';
+import 'package:crud_flutter/src/app/register/components/register_button.dart';
+import 'package:crud_flutter/src/app/register/controllers/register_index_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class RegisterSteps extends StatelessWidget {
   final Size size;
@@ -13,11 +17,22 @@ class RegisterSteps extends StatelessWidget {
     final double height = size.height;
     final double width = size.width;
 
+    // Controller
+    final controller = context.watch<RegisterIdexController>();
+
     return Column(
       children: [
-        // 35%
+        // 25%
         SizedBox(
-          height: height * 0.35,
+          height: height * 0.25,
+        ),
+
+        // 1%
+        BackArrow(size: size),
+
+        // 10%
+        SizedBox(
+          height: height * 0.1,
         ),
 
         // 10%
@@ -27,7 +42,7 @@ class RegisterSteps extends StatelessWidget {
 
           // Content
           child: Text(
-            _hint[0],
+            _hint[controller.index],
             style: TextStyle(
               fontSize: height * 0.04,
             ), // 4%
@@ -53,35 +68,9 @@ class RegisterSteps extends StatelessWidget {
           height: height * 0.05,
         ),
 
-        Container(
-          // Size
-          height: height * 0.05,
-          width: width,
-
-          // Style
-          decoration: BoxDecoration(
-            // Gradient
-            gradient: LinearGradient(
-              colors: [
-                //Colors.blue,
-                Colors.cyan.withOpacity(0.9),
-                Colors.pink.withOpacity(0.8),
-                Colors.purple,
-              ],
-            ),
-
-            // Radius
-            borderRadius: BorderRadius.circular(20.0),
-          ),
-
-          child: const Center(
-            child: Text(
-              "Next",
-              style: TextStyle(
-                color: Colors.white,
-              ),
-            ),
-          ),
+        //
+        NextButton(
+          size: size,
         ),
       ],
     );
