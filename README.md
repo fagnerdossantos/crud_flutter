@@ -5,7 +5,7 @@ A CRUD, _**(CREATE, READ, UPDATE and DELETE)**_ application made using flutter S
 The used database is **SQLite**.
 
 
-## Steps
+## Steps'
 
 > 1º You crate your account using your name, email and password.
 

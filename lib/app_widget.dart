@@ -1,3 +1,4 @@
+import 'package:crud_flutter/src/app/home/pages/home_page.dart';
 import 'package:crud_flutter/src/app/login/pages/login_page.dart';
 import 'package:crud_flutter/src/app/register/controllers/register_index_controller.dart';
 import 'package:crud_flutter/src/app/register/pages/register_page.dart';
@@ -19,8 +20,9 @@ class AppWidget extends StatelessWidget {
       ],
       child: MaterialApp(
         /* ROUTES */
-        initialRoute: "/login",
+        initialRoute: "/",
         routes: {
+          "/": (context) => const HomePage(),
           "/login": (context) => const LoginPage(),
           "/register": (context) => const RegisterPage(),
         },
